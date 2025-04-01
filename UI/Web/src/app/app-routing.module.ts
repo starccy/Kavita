@@ -100,6 +100,10 @@ const routes: Routes = [
     path: 'registration',
     loadChildren: () => import('./_routes/registration.router.module').then(m => m.routes)
   },
+  {
+    path: 'admin-login',
+    loadChildren: () => import('./_routes/registration.router.module').then(m => m.routes)
+  },
   {path: 'libraries', pathMatch: 'full', redirectTo: 'home'},
   {path: '**', pathMatch: 'prefix', redirectTo: 'home'},
   {path: '**', pathMatch: 'full', redirectTo: 'home'},
