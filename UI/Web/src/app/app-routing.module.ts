@@ -100,10 +100,6 @@ const routes: Routes = [
     path: 'registration',
     loadChildren: () => import('./_routes/registration.router.module').then(m => m.routes)
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./_routes/registration.router.module').then(m => m.routes) // TODO: Refactor so we just use /registration/login going forward
-  },
   {path: 'libraries', pathMatch: 'full', redirectTo: 'home'},
   {path: '**', pathMatch: 'prefix', redirectTo: 'home'},
   {path: '**', pathMatch: 'full', redirectTo: 'home'},

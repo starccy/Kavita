@@ -24,7 +24,7 @@ export class AuthGuard implements CanActivate {
         }
 
         localStorage.setItem(this.urlKey, window.location.pathname);
-        this.router.navigateByUrl('/login');
+        window.location.href = '/login';
         return false;
       })
     );

@@ -2,14 +2,24 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const IP = 'localhost';
+// const IP = '127.0.0.1';
+
+// export const environment = {
+//   production: false,
+//   apiUrl: 'http://' + IP + ':8080/api/',
+//   hubUrl: 'http://'+ IP + ':8080/hubs/',
+//   buyLink: 'https://buy.stripe.com/test_9AQ5mi058h1PcIo3cf?prefilled_promo_code=FREETRIAL',
+//   manageLink: 'https://billing.stripe.com/p/login/test_14kfZocuh6Tz5ag7ss'
+// };
+import { getBaseUrl } from "src/app/base-url.provider";
+const BASE_URL = getBaseUrl();
 
 export const environment = {
-  production: false,
-  apiUrl: 'http://' + IP + ':5000/api/',
-  hubUrl: 'http://'+ IP + ':5000/hubs/',
-  buyLink: 'https://buy.stripe.com/test_9AQ5mi058h1PcIo3cf?prefilled_promo_code=FREETRIAL',
-  manageLink: 'https://billing.stripe.com/p/login/test_14kfZocuh6Tz5ag7ss'
+  production: true,
+  apiUrl: `${BASE_URL}api/`,
+  hubUrl:`${BASE_URL}hubs/`,
+  buyLink: 'https://buy.stripe.com/00gcOQanFajG0hi5ko?prefilled_promo_code=FREETRIAL',
+  manageLink: 'https://billing.stripe.com/p/login/28oaFRa3HdHWb5ecMM'
 };
 
 /*
